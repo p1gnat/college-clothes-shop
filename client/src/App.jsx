@@ -1,4 +1,6 @@
 import "./App.css";
+import Line from "./components/Body/Line";
+import Main from "./components/Body/Main";
 import Header from "./components/Headers/Header";
 import TopHeader from "./components/Headers/TopHeader";
 
@@ -8,35 +10,8 @@ function App() {
       <TopHeader />
       <Header />
       <main>
-        <article>
-          <h1></h1>
-          <p></p>
-          <button></button>
-          <section>
-            <div>
-              <h2></h2>
-              <p></p>
-            </div>
-            <div>
-              <h2></h2>
-              <p></p>
-            </div>
-            <div>
-              <h2></h2>
-              <p></p>
-            </div>
-          </section>
-          <img src="" alt="Звёздочка" />
-          <img src="" alt="Звёздочка" />
-          <img src="" alt="Модели" />
-        </article>
-        <article>
-          <img src="" alt="Versace" />
-          <img src="" alt="Zara" />
-          <img src="" alt="Gucci" />
-          <img src="" alt="Prada" />
-          <img src="" alt="Calvin Clein" />
-        </article>
+        <Main />
+        <Line />
         <article>
           <h2>Новые поступления</h2>
           <section>

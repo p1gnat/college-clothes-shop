@@ -1,0 +1,12 @@
+.line {
+  margin-top: -5px;
+
+  width: 100vw;
+  height: 120px;
+  background-color: #000000;
+  padding: 0 300px 0 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
