@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+header nav {
+  display: flex;
+  width: 1280px;
+  margin: auto;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+input {
+  width: 526px;
+  height: 46px;
+  border-radius: 62px;
+
+  outline: none;
+
+  border: 0px white;
+  background-color: #f0f0f0;
+  padding: 12px 20px;
+}
+
+div form img {
+  position: relative;
+  top: 6px;
+  left: 40px;
+}

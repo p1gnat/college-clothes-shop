@@ -1,31 +1,12 @@
 import "./App.css";
-import TopHeader from "./components/TopHeader";
+import Header from "./components/Headers/Header";
+import TopHeader from "./components/Headers/TopHeader";
 
 function App() {
   return (
     <>
       <TopHeader />
-      <header>
-        <nav>
-          <h2>COLLEGE-IGN</h2>
-          <div>
-            <p>Магазин</p>
-            <p>Скидки</p>
-            <p>Новые</p>
-            <p>Брэнды</p>
-          </div>
-          <div>
-            <form action="">
-              <img src="./header/Search.svg" alt="Искать продукты" />
-              <input type="text" />
-            </form>
-          </div>
-          <div>
-            <img src="./header/Profile.svg" alt="корзина" />
-            <img src="./header/ShoppingCart.svg" alt="профиль" />
-          </div>
-        </nav>
-      </header>
+      <Header />
       <main>
         <article>
           <h1></h1>
