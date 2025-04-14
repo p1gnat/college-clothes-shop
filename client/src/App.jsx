@@ -1,4 +1,5 @@
 import "./App.css";
+import Cards from "./components/Body/Cards/Cards";
 import Line from "./components/Body/Line";
 import Main from "./components/Body/Main";
 import Header from "./components/Headers/Header";
@@ -13,43 +14,8 @@ function App() {
         <Main />
         <Line />
         <article>
-          <h2>Новые поступления</h2>
-          <section>
-            <div>
-              <img src="" alt="Джинцы" />
-              <h3></h3> <img src="" alt="рейтинг" />
-              <p></p>
-              <h3>$120</h3>
-            </div>
-          </section>
-          <section>
-            <div>
-              <img src="" alt="Элегантное платье" />
-              <h3></h3> <img src="" alt="рейтинг" />
-              <p></p>
-              <h3>
-                $240 <span>$260</span> <span>-20%</span>
-              </h3>
-            </div>
-          </section>
-          <section>
-            <div>
-              <img src="" alt="Кофта" />
-              <h3></h3> <img src="" alt="рейтинг" />
-              <p></p>
-              <h3>$180</h3>
-            </div>
-          </section>
-          <section>
-            <div>
-              <img src="" alt="Оверсайз кофта" />
-              <h3></h3> <img src="" alt="рейтинг" />
-              <p></p>
-              <h3>
-                $130 <span>$160</span> <span>-20%</span>
-              </h3>
-            </div>
-          </section>
+          <h2 className="h2">Новые поступления</h2>
+          <Cards />
           <button>Смотреть все</button>
         </article>
         <article>
