@@ -1,0 +1,66 @@
+.aside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row;
+
+  max-width: 1280px;
+  background-color: black;
+  margin: auto;
+  border-radius: 20px;
+  padding: 36px 64px;
+}
+
+.h1 {
+  max-width: 550px;
+  font-family: "Russo One";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 45px;
+  letter-spacing: 0%;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+
+  gap: 14px;
+}
+
+.input {
+  border-radius: 62px;
+  width: 350px;
+  height: 48px;
+
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.img {
+  position: relative;
+  top: 47px;
+  left: 140px;
+}
+
+.button {
+  width: 350px;
+  height: 48px;
+
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  padding: 12px 65px;
+
+  color: black;
+  background-color: white;
+
+  border-radius: 62px;
+}

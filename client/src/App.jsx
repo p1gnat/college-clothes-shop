@@ -1,5 +1,8 @@
 import "./App.css";
+import Aside from "./components/Body/Aside";
+
 import Cards from "./components/Body/Cards/Cards";
+import SecondCards from "./components/Body/Cards/SecondCards";
 import Line from "./components/Body/Line";
 import Main from "./components/Body/Main";
 import Header from "./components/Headers/Header";
@@ -13,60 +16,19 @@ function App() {
       <main>
         <Main />
         <Line />
-        <article>
-          <h2 className="h2">Новые поступления</h2>
+        <article className="card-article">
+          <h2 className="card-h2">Новые поступления</h2>
           <Cards />
-          <button>Смотреть все</button>
+          <button className="card-button">Смотреть все</button>
         </article>
-        <article>
-          <h2>Новые поступления</h2>
-          <section>
-            <div>
-              <img src="" alt="Джинцы" />
-              <h3></h3> <img src="" alt="рейтинг" />
-              <p></p>
-              <h3>$120</h3>
-            </div>
-          </section>
-          <section>
-            <div>
-              <img src="" alt="Элегантное платье" />
-              <h3></h3> <img src="" alt="рейтинг" />
-              <p></p>
-              <h3>
-                $240 <span>$260</span> <span>-20%</span>
-              </h3>
-            </div>
-          </section>
-          <section>
-            <div>
-              <img src="" alt="Кофта" />
-              <h3></h3> <img src="" alt="рейтинг" />
-              <p></p>
-              <h3>$180</h3>
-            </div>
-          </section>
-          <section>
-            <div>
-              <img src="" alt="Оверсайз кофта" />
-              <h3></h3> <img src="" alt="рейтинг" />
-              <p></p>
-              <h3>
-                $130 <span>$160</span> <span>-20%</span>
-              </h3>
-            </div>
-          </section>
-          <button>Смотреть все</button>
+        <article className="card2-article">
+          <h2 className="card-h2">Новые поступления</h2>
+          <SecondCards />
+          <button className="card-button">Смотреть все</button>
         </article>
 
+        <Aside />
         <footer>
-          <article>
-            <h1>Следи за обновлениями вместе с почтой</h1>
-            <div>
-              <input type="text" />
-              <button>Подписаться на рассылку</button>
-            </div>
-          </article>
           <article>
             <h1></h1>
             <p></p>

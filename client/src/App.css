@@ -1,3 +1,21 @@
-.h2 {
+.card-h2 {
   text-align: center;
+  margin: 72px 0 56px 0;
+}
+
+.card-button {
+  display: block;
+
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 37px auto 128px auto;
+
+  padding: 16px 57px;
+  background-color: transparent;
+
+  border: 1px solid #0000001a;
+  border-radius: 62px;
 }
