@@ -1,72 +1,91 @@
 import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer>
-      <article>
-        <h1>college-ign</h1>
-        <p>
-          У нас есть одежда, которая подходит вашему стилю и которую вы с
-          гордостью носите. От женской до мужской.
-        </p>
-        <div>
-          <a
-            href="https://github.com/p1gnat/college-clothes-shop"
-            target="_blank"
-          >
-            <img src="./other-logos/twitter.svg" alt="twitter" />
-          </a>
-          <a
-            href="https://github.com/p1gnat/college-clothes-shop"
-            target="_blank"
-          >
-            <img src="./other-logos/facebook.svg" alt="facebook" />
-          </a>
-          <a
-            href="https://github.com/p1gnat/college-clothes-shop"
-            target="_blank"
-          >
-            <img src="./other-logos/instagram.svg" alt="instagram" />
-          </a>
-          <a
-            href="https://github.com/p1gnat/college-clothes-shop"
-            target="_blank"
-          >
-            <img src="./other-logos/github.svg" alt="github" />
-          </a>
+      <div className="wrapper">
+        <div className="top">
+          <article className="first-left">
+            <h2 className="h2">COLLEGE-IGN</h2>
+            <p>
+              У нас есть одежда, которая подходит вашему стилю и которую вы с
+              гордостью носите. От женской до мужской.
+            </p>
+            <div className="images-top">
+              <a
+                href="https://github.com/p1gnat/college-clothes-shop"
+                target="_blank"
+              >
+                <img src="./other-logos/twitter.svg" alt="twitter" />
+              </a>
+              <a
+                href="https://github.com/p1gnat/college-clothes-shop"
+                target="_blank"
+              >
+                <img src="./other-logos/facebook.svg" alt="facebook" />
+              </a>
+              <a
+                href="https://github.com/p1gnat/college-clothes-shop"
+                target="_blank"
+              >
+                <img src="./other-logos/instagram.svg" alt="instagram" />
+              </a>
+              <a
+                href="https://github.com/p1gnat/college-clothes-shop"
+                target="_blank"
+              >
+                <img src="./other-logos/github.svg" alt="github" />
+              </a>
+            </div>
+          </article>
+          <section className="second-left">
+            <h3>Компания</h3>
+            <a href="#" target="_blank">
+              О компании
+            </a>
+            <a href="#" target="_blank">
+              Обновления
+            </a>
+            <a href="#" target="_blank">
+              Работы
+            </a>
+            <a href="#" target="_blank">
+              Карьера
+            </a>
+          </section>
+          <section className="third-left">
+            <h3>Акаунт</h3>
+            <a href="#" target="_blank">
+              Акаунт
+            </a>
+            <a href="#" target="_blank">
+              Управлять доставками
+            </a>
+            <a href="#" target="_blank">
+              Заказы
+            </a>
+            <a href="#" target="_blank">
+              Оплаты и чеки
+            </a>
+          </section>
         </div>
-      </article>
-      <nav>
-        <section>
-          <h3>Компания</h3>
-          <p>О компании</p>
-          <p>Обновления</p>
-          <p>Работы</p>
-          <p>Карьера</p>
+        <div className="line"></div>
+        <section className="bottom">
+          <div>
+            <p>
+              <span>college-ign</span> © 2000-2023, Все права подтверждены
+            </p>
+          </div>
+          <div>
+            <img src="./other-logos/payments/visa.png" alt="Visa" />
+            <img src="./other-logos/payments/mastercard.png" alt="Mastercard" />
+            <img src="./other-logos/payments/paypal.png" alt="Paypal" />
+            <img src="./other-logos/payments/applepay.png" alt="Apple pay" />
+            <img src="./other-logos/payments/googlepay.png" alt="Google pay" />
+          </div>
         </section>
-        <section>
-          <h3>Акаунт</h3>
-          <p>Акаунт</p>
-          <p>Управлять доставками</p>
-          <p>Заказы</p>
-          <p>Оплаты и чеки</p>
-        </section>
-      </nav>
-      <section>
-        <span></span>
-        <div>
-          <p>
-            <span>college-ign</span> © 2000-2023, Все права подтверждены
-          </p>
-        </div>
-        <div>
-          <img src="./other-logos/payments/visa.png" alt="Visa" />
-          <img src="./other-logos/payments/mastercard.png" alt="Mastercard" />
-          <img src="./other-logos/payments/paypal.png" alt="Paypal" />
-          <img src="./other-logos/payments/applepay.png" alt="Apple pay" />
-          <img src="./other-logos/payments/googlepay.png" alt="Google pay" />
-        </div>
-      </section>
+      </div>
     </footer>
   );
 };
