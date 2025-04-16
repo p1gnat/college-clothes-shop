@@ -1,13 +1,13 @@
 import "./App.css";
-import Aside from "./components/Body/Aside";
+import Aside from "../components/Body/Aside";
 
-import Cards from "./components/Body/Cards/Cards";
-import SecondCards from "./components/Body/Cards/SecondCards";
-import Line from "./components/Body/Line";
-import Main from "./components/Body/Main";
-import Footer from "./components/Footers/Footer";
-import Header from "./components/Headers/Header";
-import TopHeader from "./components/Headers/TopHeader";
+import Cards from "../components/Body/Cards/Cards";
+import SecondCards from "../components/Body/Cards/SecondCards";
+import Line from "../components/Body/Line";
+import Main from "../components/Body/Main";
+import Footer from "../components/Footers/Footer";
+import Header from "../components/Headers/Header";
+import TopHeader from "../components/Headers/TopHeader";
 
 function App() {
   return (

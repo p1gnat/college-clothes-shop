@@ -21,6 +21,17 @@ header nav {
   gap: 40px;
 }
 
+.p-navlink {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  color: #00000099;
+
+  text-decoration: none;
+}
+
 input {
   width: 526px;
   height: 46px;

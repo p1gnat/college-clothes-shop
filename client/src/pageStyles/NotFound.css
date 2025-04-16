@@ -1,0 +1,33 @@
+.main-error {
+  display: flex;
+  height: 100vh;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 15px;
+}
+
+.h1-error {
+  font-family: "Russo One";
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.p-error {
+  font-size: 24px;
+}
+
+.a-error {
+  font-family: "Russo One";
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+  color: black;
+}

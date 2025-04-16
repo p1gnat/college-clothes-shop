@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { useState } from "react";
+import { NavLink } from "react-router";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -10,10 +11,18 @@ const Header = () => {
       <nav>
         <h2>COLLEGE-IGN</h2>
         <div className="navigation">
-          <p>Магазин</p>
-          <p>Скидки</p>
-          <p>Новые</p>
-          <p>Брэнды</p>
+          <NavLink className="p-navlink" to="/shop">
+            Магазин
+          </NavLink>
+          <NavLink className="p-navlink" to="/shop">
+            Скидки
+          </NavLink>
+          <NavLink className="p-navlink" to="/shop">
+            Новые
+          </NavLink>
+          <NavLink className="p-navlink" to="/shop">
+            Брэнды
+          </NavLink>
         </div>
         <div>
           <form action="">
@@ -30,8 +39,12 @@ const Header = () => {
           </form>
         </div>
         <div>
-          <img src="./header/ShoppingCart.svg" alt="Корзина" />
-          <img src="./header/Profile.svg" alt="Профиль" />
+          <NavLink to="/cart">
+            <img src="./header/ShoppingCart.svg" alt="Корзина" />
+          </NavLink>
+          <NavLink to="/main">
+            <img src="./header/Profile.svg" alt="Профиль" />
+          </NavLink>
         </div>
       </nav>
     </header>
