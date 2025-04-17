@@ -70,7 +70,7 @@ const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
+  justify-content: center;
   background-color: white;
 `;
 

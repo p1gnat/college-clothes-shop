@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { NavLink } from "react-router";
 import axios from "axios";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 
 const H1 = styled.h1`
   font-family: Noto Sans;
@@ -72,7 +72,7 @@ const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
+  justify-content: center;
 
   background-color: white;
 `;
@@ -109,7 +109,7 @@ const Input = styled.input`
   background-color: #00000021;
 
   &:focus {
-    outline: none; /* Removes the default focus border */
+    outline: none;
   }
 `;
 
@@ -174,7 +174,6 @@ const Register = () => {
   const sendRegister = async (data) => {
     try {
       console.log(data);
-      // put url
       await axios.post("/url", {
         email: data.email,
         password: data.password,
