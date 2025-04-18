@@ -1,6 +1,8 @@
-.main {
+.main-shop {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin: auto;
   width: 1440px;
+  margin-top: 50px;
 }
