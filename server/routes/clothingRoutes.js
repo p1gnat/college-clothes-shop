@@ -1,6 +1,6 @@
 import express from "express";
-import upload from "../middleware/upload.js";
-import ClothingItem from "../models/ClothingItem.js";
+import upload from "../middleware/uploads.js";
+import ClothingItem from "../models/clothingItemSchema.js";
 
 const router = express.Router();
 
