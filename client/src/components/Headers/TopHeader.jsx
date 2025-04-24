@@ -16,7 +16,7 @@ const TopHeader = () => {
             </span>
           </p>
           <img
-            src="header/Close.svg"
+            src="/header/Close.svg"
             alt="Close it"
             onClick={() => setOpen(!open)}
           />

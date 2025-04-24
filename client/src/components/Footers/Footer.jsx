@@ -17,25 +17,25 @@ const Footer = () => {
                 href="https://github.com/p1gnat/college-clothes-shop"
                 target="_blank"
               >
-                <img src="./other-logos/twitter.svg" alt="twitter" />
+                <img src="/other-logos/twitter.svg" alt="twitter" />
               </a>
               <a
                 href="https://github.com/p1gnat/college-clothes-shop"
                 target="_blank"
               >
-                <img src="./other-logos/facebook.svg" alt="facebook" />
+                <img src="/other-logos/facebook.svg" alt="facebook" />
               </a>
               <a
                 href="https://github.com/p1gnat/college-clothes-shop"
                 target="_blank"
               >
-                <img src="./other-logos/instagram.svg" alt="instagram" />
+                <img src="/other-logos/instagram.svg" alt="instagram" />
               </a>
               <a
                 href="https://github.com/p1gnat/college-clothes-shop"
                 target="_blank"
               >
-                <img src="./other-logos/github.svg" alt="github" />
+                <img src="/other-logos/github.svg" alt="github" />
               </a>
             </div>
           </article>
@@ -78,11 +78,11 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <img src="./other-logos/payments/visa.png" alt="Visa" />
-            <img src="./other-logos/payments/mastercard.png" alt="Mastercard" />
-            <img src="./other-logos/payments/paypal.png" alt="Paypal" />
-            <img src="./other-logos/payments/applepay.png" alt="Apple pay" />
-            <img src="./other-logos/payments/googlepay.png" alt="Google pay" />
+            <img src="/other-logos/payments/visa.png" alt="Visa" />
+            <img src="/other-logos/payments/mastercard.png" alt="Mastercard" />
+            <img src="/other-logos/payments/paypal.png" alt="Paypal" />
+            <img src="/other-logos/payments/applepay.png" alt="Apple pay" />
+            <img src="/other-logos/payments/googlepay.png" alt="Google pay" />
           </div>
         </section>
       </div>

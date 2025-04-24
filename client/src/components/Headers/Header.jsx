@@ -27,7 +27,7 @@ const Header = () => {
         <div>
           <form action="">
             <img
-              src="./header/Search.svg"
+              src="/header/Search.svg"
               alt="Искать продукты"
               style={{ visibility: isOpen ? "visible" : "hidden" }}
             />
@@ -40,10 +40,10 @@ const Header = () => {
         </div>
         <div>
           <NavLink to="/cart">
-            <img src="./header/ShoppingCart.svg" alt="Корзина" />
+            <img src="/header/ShoppingCart.svg" alt="Корзина" />
           </NavLink>
           <NavLink to="/main">
-            <img src="./header/Profile.svg" alt="Профиль" />
+            <img src="/header/Profile.svg" alt="Профиль" />
           </NavLink>
         </div>
       </nav>
