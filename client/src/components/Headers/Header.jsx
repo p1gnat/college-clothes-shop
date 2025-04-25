@@ -9,7 +9,11 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <h2>COLLEGE-IGN</h2>
+        <h2 style={{ cursor: "pointer" }}>
+          <a href="/main" style={{ textDecoration: "none", color: "black" }}>
+            COLLEGE-IGN
+          </a>
+        </h2>
         <div className="navigation">
           <NavLink className="p-navlink" to="/shop">
             Магазин

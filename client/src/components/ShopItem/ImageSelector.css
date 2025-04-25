@@ -1,0 +1,12 @@
+.selector-wrapper {
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+}
+
+.side-image-selector {
+  max-width: 152px;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}

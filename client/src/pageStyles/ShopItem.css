@@ -1,0 +1,130 @@
+.main-wrap {
+  display: flex;
+  margin: auto;
+  margin-top: 42px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  flex-flow: row;
+}
+.for-gaps {
+  display: flex;
+  gap: 20px;
+  flex-flow: column;
+}
+
+.title {
+  font-family: "Russo One";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.rating {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  color: #000000;
+}
+.rating-bold {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  color: #0000004d;
+}
+.price {
+  font-family: "Russo One";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.description {
+  max-width: 600px;
+
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+.sizes {
+  margin-top: 50px;
+}
+.sizes-wrapper {
+  display: flex;
+  flex-flow: row;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.size-buttons {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  color: #00000099;
+  padding: 12px 24px;
+  border-radius: 62px;
+  border: 0px;
+  background-color: #f0f0f0;
+}
+.solo-item-buttons {
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+}
+.full-button {
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 34px;
+
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 62px;
+  background-color: #f0f0f0;
+}
+.counter {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.plus-minus {
+  font-family: "Russo One";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+  border: 0px;
+  background-color: #f0f0f0;
+}
+.final-button {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  color: white;
+  background-color: black;
+  border-radius: 64px;
+  border: 0px;
+  padding: 17px 134px;
+}
