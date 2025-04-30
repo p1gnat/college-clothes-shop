@@ -14,7 +14,6 @@ const Cards = () => {
     (async () => {
       const data = await axios.get("http://localhost:5000/api/clothes");
       setClothes(data.data);
-      console.log(`../../../../../server${data.data[0].image}`);
     })();
   }, []);
 
@@ -29,22 +28,22 @@ const Cards = () => {
             price={clothes[0].price}
           />
           <Card
-            img="./main/cards/black-dress.png"
-            h3="Элегантное платье"
-            rating="3.5"
-            price="240"
+            img={`http://localhost:5000${clothes[1].image}`}
+            h3={clothes[1].name}
+            rating={clothes[1].rating}
+            price={clothes[1].price}
           />
           <Card
-            img="./main/cards/grey-sweater.png"
-            h3="Кофта"
-            rating="4.5"
-            price="180"
+            img={`http://localhost:5000${clothes[2].image}`}
+            h3={clothes[2].name}
+            rating={clothes[2].rating}
+            price={clothes[2].price}
           />
           <Card
-            img="./main/cards/pink-sweater.png"
-            h3="Оверсайз кофта"
-            rating="4.5"
-            price="130"
+            img={`http://localhost:5000${clothes[3].image}`}
+            h3={clothes[3].name}
+            rating={clothes[3].rating}
+            price={clothes[3].price}
           />
         </>
       ) : (

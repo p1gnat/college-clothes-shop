@@ -1,38 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Card from "../Card";
+import axios from "axios";
 
 import "./SecondCards.css";
-import Card from "../Card";
-import CardDiscount from "../CardDiscount";
 
 const SecondCards = () => {
+  const [clothes, setClothes] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const data = await axios.get("http://localhost:5000/api/clothes");
+      setClothes(data.data);
+    })();
+  }, []);
+
   return (
     <section className="cards">
-      <CardDiscount
-        img="./main/cards/topic.png"
-        h3="Топик"
-        rating="5.0"
-        price="212"
-        oldPrice="232"
-        discount="20"
-      ></CardDiscount>
-      <Card
-        img="./main/cards/second-topic.png"
-        h3="Короткая кофта"
-        rating="4.0"
-        price="180"
-      ></Card>
-      <Card
-        img="./main/cards/T-shirt.png"
-        h3="Футболка"
-        rating="3.0"
-        price="180"
-      ></Card>
-      <Card
-        img="./main/cards/trousers.png"
-        h3="Узкие джинцы"
-        rating="4.5"
-        price="180"
-      ></Card>
+      {clothes.length > 0 ? (
+        <>
+          <Card
+            img={`http://localhost:5000${clothes[4].image}`}
+            h3={clothes[4].name}
+            rating={clothes[4].rating}
+            price={clothes[4].price}
+          ></Card>
+          <Card
+            img={`http://localhost:5000${clothes[5].image}`}
+            h3={clothes[5].name}
+            rating={clothes[5].rating}
+            price={clothes[5].price}
+          ></Card>
+          <Card
+            img={`http://localhost:5000${clothes[6].image}`}
+            h3={clothes[6].name}
+            rating={clothes[6].rating}
+            price={clothes[6].price}
+          ></Card>
+          <Card
+            img={`http://localhost:5000${clothes[7].image}`}
+            h3={clothes[7].name}
+            rating={clothes[7].rating}
+            price={clothes[7].price}
+          ></Card>
+        </>
+      ) : (
+        <>Загрузка...</>
+      )}
     </section>
   );
 };

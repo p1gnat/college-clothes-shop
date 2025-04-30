@@ -1,17 +1,15 @@
 import React from "react";
 import "./ProductCard.css";
-import CardDiscount from "../Body/CardDiscount";
+import Card from "../Body/Card";
 
-const ProductCard = () => {
+const ProductCard = ({ image, name, rating, price }) => {
   return (
     <div style={{ margin: "20px 0 40px 0" }}>
-      <CardDiscount
-        img="./main/cards/black-dress.png"
-        h3="Элегантное платье"
-        rating="3.5"
-        price="240"
-        oldPrice="260"
-        discount="20"
+      <Card
+        img={`http://localhost:5000${image}`}
+        h3={name}
+        rating={rating}
+        price={price}
       />
     </div>
   );
