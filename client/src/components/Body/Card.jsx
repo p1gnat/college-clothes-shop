@@ -1,10 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router";
+
 import "./Card.css";
 
-const Card = ({ img, h3, rating, price }) => {
+const Card = ({ img, h3, rating, price, id }) => {
   return (
     <section className="card">
-      <img src={img} alt={h3} width="295px" height="295px" />
+      <NavLink to={`/shop/${id}`}>
+        <img src={img} alt={h3} width="295px" height="295px" />
+      </NavLink>
       <h3>{h3}</h3>
       <p>
         {rating}

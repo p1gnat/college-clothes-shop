@@ -12,6 +12,7 @@ const ImageSelector = ({ img }) => {
           style={{
             border: selected == 1 ? "2px solid black" : "",
             borderRadius: "20px",
+            objectFit: "cover",
           }}
           alt="product's look"
           width={"152px"}
@@ -23,6 +24,7 @@ const ImageSelector = ({ img }) => {
           style={{
             border: selected == 2 ? "2px solid black" : "",
             borderRadius: "20px",
+            objectFit: "cover",
           }}
           alt="product's look"
           width={"152px"}
@@ -34,6 +36,7 @@ const ImageSelector = ({ img }) => {
           style={{
             border: selected == 3 ? "2px solid black" : "",
             borderRadius: "20px",
+            objectFit: "cover",
           }}
           alt="product's look"
           width={"152px"}
@@ -41,7 +44,13 @@ const ImageSelector = ({ img }) => {
           onClick={() => setSelected(3)}
         />
       </section>
-      <img src={img} alt="product's look" width={"444px"} height={"530px"} />
+      <img
+        src={img}
+        alt="product's look"
+        width={"444px"}
+        height={"530px"}
+        style={{ objectFit: "contain" }}
+      />
     </div>
   );
 };

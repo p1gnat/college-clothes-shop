@@ -26,24 +26,28 @@ const Cards = () => {
             h3={clothes[0].name}
             rating={clothes[0].rating}
             price={clothes[0].price}
+            id={clothes[0]._id}
           />
           <Card
             img={`http://localhost:5000${clothes[1].image}`}
             h3={clothes[1].name}
             rating={clothes[1].rating}
             price={clothes[1].price}
+            id={clothes[1]._id}
           />
           <Card
             img={`http://localhost:5000${clothes[2].image}`}
             h3={clothes[2].name}
             rating={clothes[2].rating}
             price={clothes[2].price}
+            id={clothes[2]._id}
           />
           <Card
             img={`http://localhost:5000${clothes[3].image}`}
             h3={clothes[3].name}
             rating={clothes[3].rating}
             price={clothes[3].price}
+            id={clothes[3]._id}
           />
         </>
       ) : (

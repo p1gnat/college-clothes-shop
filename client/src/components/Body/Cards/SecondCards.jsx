@@ -23,24 +23,28 @@ const SecondCards = () => {
             h3={clothes[4].name}
             rating={clothes[4].rating}
             price={clothes[4].price}
+            id={clothes[4]._id}
           ></Card>
           <Card
             img={`http://localhost:5000${clothes[5].image}`}
             h3={clothes[5].name}
             rating={clothes[5].rating}
             price={clothes[5].price}
+            id={clothes[5]._id}
           ></Card>
           <Card
             img={`http://localhost:5000${clothes[6].image}`}
             h3={clothes[6].name}
             rating={clothes[6].rating}
             price={clothes[6].price}
+            id={clothes[6]._id}
           ></Card>
           <Card
             img={`http://localhost:5000${clothes[7].image}`}
             h3={clothes[7].name}
             rating={clothes[7].rating}
             price={clothes[7].price}
+            id={clothes[7]._id}
           ></Card>
         </>
       ) : (
