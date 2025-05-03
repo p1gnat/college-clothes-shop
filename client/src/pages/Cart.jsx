@@ -5,8 +5,12 @@ import Aside from "../components/Body/Aside";
 import Footer from "../components/Footers/Footer";
 import CartCard from "../components/Cart/CartCard";
 import "../pageStyles/Cart.css";
+import { useStore } from "../components/Store/store";
 
 const Cart = () => {
+  const products = useStore((state) => state.products);
+  console.log("Updated products:", products);
+
   return (
     <>
       <TopHeader></TopHeader>
