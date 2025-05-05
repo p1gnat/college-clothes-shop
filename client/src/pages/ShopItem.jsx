@@ -137,7 +137,9 @@ const ShopItem = () => {
                   className="final-button"
                   onClick={() => {
                     console.log(`size: ${selected} ; number: ${howMany}`);
-                    addProducts(itemId.id);
+                    if (!products.includes(itemId.id)) {
+                      addProducts(itemId.id);
+                    }
                   }}
                 >
                   Добавить в корзину

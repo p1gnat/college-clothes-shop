@@ -21,9 +21,13 @@ const Cart = () => {
             Твоя корзина
           </h2>
           <div className="cards-wrapper">
-            <CartCard />
-            <CartCard />
-            <CartCard />
+            {products.length > 0 ? (
+              products.map((elem) => {
+                return <CartCard id={elem} key={elem} />;
+              })
+            ) : (
+              <></>
+            )}
           </div>
         </div>
         <div className="checkout">
