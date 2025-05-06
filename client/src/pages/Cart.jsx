@@ -23,7 +23,7 @@ const Cart = () => {
           <div className="cards-wrapper">
             {products.length > 0 ? (
               products.map((elem) => {
-                return <CartCard id={elem} key={elem} />;
+                return <CartCard elem={elem} key={elem} />;
               })
             ) : (
               <></>

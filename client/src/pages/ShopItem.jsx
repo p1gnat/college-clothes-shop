@@ -15,7 +15,7 @@ const ShopItem = () => {
 
   const [cloth, setCloth] = useState({});
   const [howMany, setHowMany] = useState(1);
-  const [selected, setSelected] = useState("medium");
+  const [selected, setSelected] = useState("M");
 
   const products = useStore((state) => state.products);
 
@@ -63,11 +63,11 @@ const ShopItem = () => {
                 <button
                   className="size-buttons"
                   onClick={() => {
-                    setSelected("small");
+                    setSelected("S");
                   }}
                   style={{
-                    backgroundColor: selected == "small" ? "black" : "#F0F0F0",
-                    color: selected == "small" ? "white" : "#00000099",
+                    backgroundColor: selected == "S" ? "black" : "#F0F0F0",
+                    color: selected == "S" ? "white" : "#00000099",
                   }}
                 >
                   S
@@ -75,11 +75,11 @@ const ShopItem = () => {
                 <button
                   className="size-buttons"
                   onClick={() => {
-                    setSelected("medium");
+                    setSelected("M");
                   }}
                   style={{
-                    backgroundColor: selected == "medium" ? "black" : "#F0F0F0",
-                    color: selected == "medium" ? "white" : "#00000099",
+                    backgroundColor: selected == "M" ? "black" : "#F0F0F0",
+                    color: selected == "M" ? "white" : "#00000099",
                   }}
                 >
                   M
@@ -87,11 +87,11 @@ const ShopItem = () => {
                 <button
                   className="size-buttons"
                   onClick={() => {
-                    setSelected("large");
+                    setSelected("L");
                   }}
                   style={{
-                    backgroundColor: selected == "large" ? "black" : "#F0F0F0",
-                    color: selected == "large" ? "white" : "#00000099",
+                    backgroundColor: selected == "L" ? "black" : "#F0F0F0",
+                    color: selected == "L" ? "white" : "#00000099",
                   }}
                 >
                   L
@@ -99,11 +99,11 @@ const ShopItem = () => {
                 <button
                   className="size-buttons"
                   onClick={() => {
-                    setSelected("xl");
+                    setSelected("XL");
                   }}
                   style={{
-                    backgroundColor: selected == "xl" ? "black" : "#F0F0F0",
-                    color: selected == "xl" ? "white" : "#00000099",
+                    backgroundColor: selected == "XL" ? "black" : "#F0F0F0",
+                    color: selected == "XL" ? "white" : "#00000099",
                   }}
                 >
                   XL
@@ -138,7 +138,11 @@ const ShopItem = () => {
                   onClick={() => {
                     console.log(`size: ${selected} ; number: ${howMany}`);
                     if (!products.includes(itemId.id)) {
-                      addProducts(itemId.id);
+                      addProducts({
+                        id: itemId.id,
+                        size: selected,
+                        quantity: howMany,
+                      });
                     }
                   }}
                 >

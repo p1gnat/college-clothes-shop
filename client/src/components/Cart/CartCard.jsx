@@ -3,19 +3,20 @@ import "./CartCard.css";
 import { useStore } from "../Store/store";
 import axios from "axios";
 
-const CartCard = ({ id }) => {
+const CartCard = ({ elem }) => {
   const removeProducts = useStore((state) => state.removeProduct);
+  const updateQuantity = useStore((state) => state.updateQuantity);
   const [product, setProduct] = useState([]);
-  console.log(id);
+  console.log(elem.id);
 
   useEffect(() => {
     (async () => {
       const productFetch = await axios.get(
-        `http://localhost:5000/api/clothes/${id}`
+        `http://localhost:5000/api/clothes/${elem.id}`
       );
       setProduct(productFetch.data);
     })();
-  }, []);
+  }, [elem.id]);
 
   useEffect(() => {
     console.log(product);
@@ -38,21 +39,35 @@ const CartCard = ({ id }) => {
                 src="/InShop/trash-bin.svg"
                 alt="delete"
                 onClick={() => {
-                  removeProducts(product._id);
+                  removeProducts(elem.id, elem.size);
                 }}
                 style={{ cursor: "pointer" }}
               />
             </div>
             <p>
               Размер:
-              <span>M</span>
+              <span>{elem.size}</span>
             </p>
             <div className="left-right">
               <h2 className="cart-card-price">${product.price}</h2>
               <div className="cart-buttons">
-                <button className="cart-minus-plus">-</button>
-                <h2 className="cart-counter">1</h2>
-                <button className="cart-minus-plus">+</button>
+                <button
+                  className="cart-minus-plus"
+                  onClick={() => {
+                    updateQuantity(elem.id, elem.size, -1);
+                  }}
+                >
+                  -
+                </button>
+                <h2 className="cart-counter">{elem.quantity}</h2>
+                <button
+                  className="cart-minus-plus"
+                  onClick={() => {
+                    updateQuantity(elem.id, elem.size, 1);
+                  }}
+                >
+                  +
+                </button>
               </div>
             </div>
           </section>
