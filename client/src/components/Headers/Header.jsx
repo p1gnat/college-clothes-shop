@@ -2,9 +2,11 @@ import React from "react";
 import "./Header.css";
 import { useState } from "react";
 import { NavLink } from "react-router";
+import { useStore } from "../Store/store";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const products = useStore((state) => state.products);
 
   return (
     <header>
@@ -43,8 +45,15 @@ const Header = () => {
           </form>
         </div>
         <div>
-          <NavLink to="/cart">
+          <NavLink to="/cart" style={{ textDecoration: "none" }}>
             <img src="/header/ShoppingCart.svg" alt="Корзина" />
+            {products.length > 0 ? (
+              <>
+                <span className="span-notification">{products.length}</span>
+              </>
+            ) : (
+              <></>
+            )}
           </NavLink>
           <NavLink to="/main">
             <img src="/header/Profile.svg" alt="Профиль" />

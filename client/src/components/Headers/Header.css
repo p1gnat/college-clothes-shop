@@ -49,3 +49,20 @@ div form img {
   top: 6px;
   left: 40px;
 }
+
+.span-notification {
+  font-family: "Roboto";
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 22px;
+
+  position: relative;
+  top: 15px;
+  right: 10px;
+
+  background-color: red;
+  padding: 5px 12px;
+  border-radius: 20px;
+
+  color: white;
+}

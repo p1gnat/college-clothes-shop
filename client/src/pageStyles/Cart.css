@@ -7,7 +7,7 @@
 }
 
 .checkout {
-  margin: auto;
+  margin-top: 20px;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -17,6 +17,7 @@
   padding: 20px 24px 50px 24px;
 }
 .cart-h2 {
+  margin-top: 20px;
   font-family: "Russo One";
   font-weight: 400;
   font-size: 24px;
