@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { NavLink } from "react-router";
+import Header from "../components/Login/Header";
 
 const H1 = styled.h1`
   font-family: Noto Sans;
@@ -158,49 +159,52 @@ const Login = () => {
   };
 
   return (
-    <Wrapper>
-      {/* <h1>It`s a register page with id: {params.id}</h1> */}
-      <H1>Log In</H1>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <FormDiv>
-          <Label
-            htmlFor=""
-            onClick={(e) => {
-              e.target.nextElementSibling.focus();
-            }}
-          >
-            Username or email
-          </Label>
-          <Input type="text" {...register("usernameEmail")} />
-          <PError>{errors.usernameEmail?.message}</PError>
-        </FormDiv>
+    <>
+      <Header></Header>
+      <Wrapper>
+        {/* <h1>It`s a register page with id: {params.id}</h1> */}
+        <H1>Зайти в акаунт</H1>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <FormDiv>
+            <Label
+              htmlFor=""
+              onClick={(e) => {
+                e.target.nextElementSibling.focus();
+              }}
+            >
+              Имя или Почта
+            </Label>
+            <Input type="text" {...register("usernameEmail")} />
+            <PError>{errors.usernameEmail?.message}</PError>
+          </FormDiv>
 
-        <FormDiv>
-          <Label
-            htmlFor=""
-            onClick={(e) => {
-              e.target.nextElementSibling.focus();
-            }}
-          >
-            Password
-          </Label>
-          <Input type="password" {...register("password")} />
-          <PError>{errors.password?.message}</PError>
-        </FormDiv>
-        <ButtonDiv>
-          <Button type="submit">Login</Button>
-        </ButtonDiv>
-      </Form>
-      <Section>
-        <A href="#">Forgot your password?</A>
-        <P>
-          Doesn’t have an account?
-          <NavLinkStyled to="/register" style={{ marginLeft: "5px" }}>
-            Register
-          </NavLinkStyled>
-        </P>
-      </Section>
-    </Wrapper>
+          <FormDiv>
+            <Label
+              htmlFor=""
+              onClick={(e) => {
+                e.target.nextElementSibling.focus();
+              }}
+            >
+              Пароль
+            </Label>
+            <Input type="password" {...register("password")} />
+            <PError>{errors.password?.message}</PError>
+          </FormDiv>
+          <ButtonDiv>
+            <Button type="submit">Зайти в акаунт</Button>
+          </ButtonDiv>
+        </Form>
+        <Section>
+          <A href="#">Забыли пароль?</A>
+          <P>
+            Нету акаунта?
+            <NavLinkStyled to="/register" style={{ marginLeft: "5px" }}>
+              Зарегистрироваться
+            </NavLinkStyled>
+          </P>
+        </Section>
+      </Wrapper>
+    </>
   );
 };
 

@@ -12,9 +12,12 @@ const Header = () => {
     <header>
       <nav>
         <h2 style={{ cursor: "pointer" }}>
-          <a href="/main" style={{ textDecoration: "none", color: "black" }}>
+          <NavLink
+            href="/main"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             COLLEGE-IGN
-          </a>
+          </NavLink>
         </h2>
         <div className="navigation">
           <NavLink className="p-navlink" to="/shop">
@@ -55,7 +58,10 @@ const Header = () => {
               <></>
             )}
           </NavLink>
-          <NavLink to="/main">
+          <NavLink
+            to="/login
+          "
+          >
             <img src="/header/Profile.svg" alt="Профиль" />
           </NavLink>
         </div>

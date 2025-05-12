@@ -5,6 +5,7 @@ import * as yup from "yup";
 import { NavLink } from "react-router";
 import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
+import Header from "../components/Login/Header";
 
 const H1 = styled.h1`
   font-family: Noto Sans;
@@ -199,88 +200,91 @@ const Register = () => {
   };
 
   return (
-    <Wrapper>
-      <H1>Register</H1>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <FormDiv>
-          <Label
-            htmlFor=""
-            onClick={(e) => {
-              e.target.nextElementSibling.focus();
+    <>
+      <Header></Header>
+      <Wrapper>
+        <H1>Зарегистрироваться</H1>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <FormDiv>
+            <Label
+              htmlFor=""
+              onClick={(e) => {
+                e.target.nextElementSibling.focus();
+              }}
+            >
+              Почта
+            </Label>
+            <Input type="text" {...register("email")} />
+            <PError>{errors.email?.message}</PError>
+          </FormDiv>
+
+          <FormDiv>
+            <Label
+              htmlFor=""
+              onClick={(e) => {
+                e.target.nextElementSibling.focus();
+              }}
+            >
+              Пароль
+            </Label>
+            <Input type="password" {...register("password")} />
+            <PError>{errors.password?.message}</PError>
+          </FormDiv>
+
+          <FormDiv>
+            <Label
+              htmlFor=""
+              onClick={(e) => {
+                e.target.nextElementSibling.focus();
+              }}
+            >
+              Повторите пароль
+            </Label>
+            <Input type="password" {...register("repeatPassword")} />
+            <PError>{errors.repeatPassword?.message}</PError>
+          </FormDiv>
+
+          <P
+            onClick={() => {
+              const checkbox = document.querySelector('input[type="checkbox"]');
+              checkbox.click();
             }}
           >
-            Email
-          </Label>
-          <Input type="text" {...register("email")} />
-          <PError>{errors.email?.message}</PError>
-        </FormDiv>
-
-        <FormDiv>
-          <Label
-            htmlFor=""
-            onClick={(e) => {
-              e.target.nextElementSibling.focus();
-            }}
-          >
-            Password
-          </Label>
-          <Input type="password" {...register("password")} />
-          <PError>{errors.password?.message}</PError>
-        </FormDiv>
-
-        <FormDiv>
-          <Label
-            htmlFor=""
-            onClick={(e) => {
-              e.target.nextElementSibling.focus();
-            }}
-          >
-            Repeat Password
-          </Label>
-          <Input type="password" {...register("repeatPassword")} />
-          <PError>{errors.repeatPassword?.message}</PError>
-        </FormDiv>
-
-        <P
-          onClick={() => {
-            const checkbox = document.querySelector('input[type="checkbox"]');
-            checkbox.click();
-          }}
-        >
-          <Checkbox
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-            type="checkbox"
-            {...register("readed")}
-          />
-          I’ve read and understand the
-          <A href="#" target="_blank" style={{ marginLeft: "5px" }}>
-            Terms of Service
-          </A>
-        </P>
-        <PError style={{ marginRight: "50px" }}>
-          {errors.readed?.message}
-        </PError>
-
-        <ButtonDiv>
-          <Button type="submit" disabled={isLoading}>
-            {isLoading ? "...Sending" : "Register"}
-          </Button>
-        </ButtonDiv>
-
-        {error && <PError>{error.message || "Something went wrong!"}</PError>}
-
-        <Section>
-          <P>
-            Already have an account?
-            <NavLinkStyled to="/login" style={{ marginLeft: "5px" }}>
-              Login
-            </NavLinkStyled>
+            <Checkbox
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+              type="checkbox"
+              {...register("readed")}
+            />
+            Я прочитал политику компании
+            <A href="#" target="_blank" style={{ marginLeft: "5px" }}>
+              Сервисный документ
+            </A>
           </P>
-        </Section>
-      </Form>
-    </Wrapper>
+          <PError style={{ marginRight: "50px" }}>
+            {errors.readed?.message}
+          </PError>
+
+          <ButtonDiv>
+            <Button type="submit" disabled={isLoading}>
+              {isLoading ? "...Sending" : "Register"}
+            </Button>
+          </ButtonDiv>
+
+          {error && <PError>{error.message || "Something went wrong!"}</PError>}
+
+          <Section>
+            <P>
+              Уже есть акаунт?
+              <NavLinkStyled to="/login" style={{ marginLeft: "5px" }}>
+                Зайти в акаунт
+              </NavLinkStyled>
+            </P>
+          </Section>
+        </Form>
+      </Wrapper>
+    </>
   );
 };
 
