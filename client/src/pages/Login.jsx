@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { NavLink } from "react-router";
 import Header from "../components/Login/Header";
+import axios from "axios";
 
 const H1 = styled.h1`
   font-family: Noto Sans;
@@ -137,7 +138,7 @@ const ButtonDiv = styled.div`
 `;
 
 const schema = yup.object({
-  usernameEmail: yup.string().required("Please enter the username or name"),
+  email: yup.string().required("Please enter the username or name"),
   password: yup.string().required("Please enter the password"),
 });
 
@@ -155,7 +156,16 @@ const Login = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    reset();
+    axios
+      .post("http://localhost:5000/api/auth/login", {
+        email: data.email,
+        password: data.password,
+      })
+      .then((data) => {
+        localStorage.setItem("jwt", data.data.token);
+        console.log("jwt is: ", localStorage.getItem("jwt"));
+        reset();
+      });
   };
 
   return (
@@ -172,10 +182,10 @@ const Login = () => {
                 e.target.nextElementSibling.focus();
               }}
             >
-              Имя или Почта
+              Почта
             </Label>
-            <Input type="text" {...register("usernameEmail")} />
-            <PError>{errors.usernameEmail?.message}</PError>
+            <Input type="text" {...register("email")} />
+            <PError>{errors.email?.message}</PError>
           </FormDiv>
 
           <FormDiv>

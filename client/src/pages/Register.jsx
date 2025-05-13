@@ -175,10 +175,19 @@ const Register = () => {
   const sendRegister = async (data) => {
     try {
       console.log(data);
-      await axios.post("/url", {
-        email: data.email,
-        password: data.password,
-      });
+      try {
+        axios
+          .post("http://localhost:5000/api/auth/register", {
+            email: data.email,
+            password: data.password,
+          })
+          .then((data) => {
+            console.log(data);
+            reset();
+          });
+      } catch (err) {
+        console.log(err.message);
+      }
     } catch (err) {
       throw new Error(err.response?.data?.message || "Registration failed");
     }
