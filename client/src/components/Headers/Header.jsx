@@ -19,7 +19,7 @@ const Header = () => {
             COLLEGE-IGN
           </NavLink>
         </h2>
-        <div className="navigation">
+        <div className="navigation-header">
           <NavLink className="p-navlink" to="/shop">
             Магазин
           </NavLink>
@@ -41,6 +41,7 @@ const Header = () => {
               style={{ visibility: isOpen ? "visible" : "hidden" }}
             />
             <input
+              className="header-input"
               type="text"
               onFocus={() => setIsOpen(false)}
               onBlur={() => setIsOpen(true)}

@@ -8,7 +8,7 @@ const TopHeader = () => {
   return (
     <div>
       {open ? (
-        <aside>
+        <aside className="topHeader-aside">
           <p className="p">
             Зарегистрируйтесь и получите скидку 20% на первый заказ.
             <span>
@@ -16,6 +16,7 @@ const TopHeader = () => {
             </span>
           </p>
           <img
+            className=""
             src="/header/Close.svg"
             alt="Close it"
             onClick={() => setOpen(!open)}

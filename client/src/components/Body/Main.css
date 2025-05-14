@@ -8,6 +8,35 @@
   margin: auto;
 }
 
+@media (max-width: 1650px) {
+  .main {
+    margin-top: 70px;
+    width: 1000px;
+    flex-flow: column;
+  }
+}
+
+@media (max-width: 1650px) {
+  .main {
+    width: 1000px;
+  }
+}
+@media (max-width: 1200px) {
+  .main {
+    width: 800px;
+  }
+}
+@media (max-width: 1000px) {
+  .main {
+    width: 600px;
+  }
+}
+@media (max-width: 800px) {
+  .main {
+    width: 400px;
+  }
+}
+
 .main h1 {
   font-family: "Russo One";
   font-weight: 400;

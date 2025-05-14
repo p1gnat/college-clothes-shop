@@ -8,7 +8,7 @@ const Aside = () => {
 
   return (
     <aside className="aside">
-      <h1 className="h1">Следи за обновлениями вместе с почтой</h1>
+      <h1 className="aside-h1">Следи за обновлениями вместе с почтой</h1>
       <form className="form" action="">
         <img
           className="img"

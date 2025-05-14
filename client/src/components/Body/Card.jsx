@@ -7,7 +7,13 @@ const Card = ({ img, h3, rating, price, id }) => {
   return (
     <section className="card">
       <NavLink to={`/shop/${id}`}>
-        <img src={img} alt={h3} width="295px" height="295px" />
+        <img
+          src={img}
+          alt={h3}
+          width="295px"
+          height="295px"
+          className="image-size"
+        />
       </NavLink>
       <h3>{h3}</h3>
       <p>

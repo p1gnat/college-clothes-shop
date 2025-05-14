@@ -70,7 +70,6 @@ const Footer = () => {
             </a>
           </section>
         </div>
-        <div className="line"></div>
         <section className="bottom">
           <div>
             <p>

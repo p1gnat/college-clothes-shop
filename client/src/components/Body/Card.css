@@ -6,6 +6,13 @@
   gap: 13px;
 }
 
+@media (max-width: 1250px) {
+  .image-size {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 .card h3 {
   font-family: "Russo One";
   font-weight: 400;

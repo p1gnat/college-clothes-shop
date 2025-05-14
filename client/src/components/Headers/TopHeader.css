@@ -1,4 +1,4 @@
-aside {
+.topHeader-aside {
   background-color: black;
   color: white;
 
@@ -15,7 +15,7 @@ aside {
   letter-spacing: 0%;
 }
 
-aside span a {
+.topHeader-aside span a {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 14px;
@@ -26,10 +26,16 @@ aside span a {
   list-style: none;
 }
 
-aside img {
+.topHeader-aside img {
   position: relative;
   left: 250px;
   cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .topHeader-aside img {
+    left: 20px;
+  }
 }
 
 nav h2 {

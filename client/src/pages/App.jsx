@@ -17,7 +17,6 @@ function App() {
       <Header />
       <main>
         <Main />
-        <Line />
         <article className="card-article">
           <h2 className="card-h2">Новые поступления</h2>
           <Cards />
