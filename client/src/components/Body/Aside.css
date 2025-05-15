@@ -20,6 +20,12 @@
   }
 }
 
+@media (min-width: 1440px) {
+  .aside {
+    max-width: 1440px;
+  }
+}
+
 .aside-h1 {
   max-width: 550px;
   font-family: "Russo One";
@@ -39,9 +45,10 @@
   gap: 14px;
 }
 
-.input {
+.aside-input {
   border-radius: 62px;
   width: 350px;
+  padding: 10px;
   height: 48px;
 
   font-family: "Roboto";
@@ -73,4 +80,18 @@
   background-color: white;
 
   border-radius: 62px;
+}
+
+@media (max-width: 600px) {
+  .aside-input {
+    margin-top: 20px;
+    width: 300px;
+  }
+  .button {
+    width: 300px;
+    padding: 12px 35px;
+  }
+  .img {
+    display: none;
+  }
 }

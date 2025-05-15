@@ -3,7 +3,8 @@
   margin: 0 auto;
   padding: 0 1rem; /* this padding creates breathing space */
   box-sizing: border-box; /* make sure padding doesn’t add to width */
-  overflow-x: hidden; /* prevent any accidental horizontal scroll */
+  overflow-x: hidden;
+  overflow-y: hidden; /* prevent any accidental horizontal scroll */
 }
 
 @media (max-width: 1250px) {

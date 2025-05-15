@@ -1,7 +1,7 @@
 footer {
   width: 100vw;
   padding-top: 100px;
-  height: 500px;
+
   z-index: -100;
 
   background-color: #f0f0f0;
@@ -48,22 +48,16 @@ footer {
     width: 440px;
   }
 }
+@media (max-width: 550px) {
+  .wrapper {
+    width: 350px;
+  }
+}
 
 .bottom {
   margin-top: 70px;
   display: flex;
   justify-content: space-between;
-}
-
-.line {
-  position: relative;
-  top: 30px;
-
-  height: 1px;
-  width: 1440px;
-  margin: auto;
-  border: 1px solid #0000001a;
-  background-color: transparent;
 }
 
 .first-left {
@@ -143,4 +137,49 @@ section a {
 
   color: #00000099;
   text-decoration: none;
+}
+
+.second-both {
+  display: flex;
+  flex-flow: row;
+  gap: 200px;
+}
+
+@media (max-width: 900px) {
+  .bottom {
+    flex-flow: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .second-both {
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .top {
+    align-items: center;
+  }
+
+  .bottom-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 750px) {
+  .top {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .second-left {
+    gap: 10px;
+  }
+
+  .third-left {
+    gap: 10px;
+  }
 }

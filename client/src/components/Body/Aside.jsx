@@ -17,7 +17,7 @@ const Aside = () => {
           style={{ visibility: isActive ? "visible" : "hidden" }}
         />
         <input
-          className="input"
+          className="aside-input"
           type="text"
           placeholder="Введите свою эллектронную почту..."
           onFocus={() => setIsActive(false)}

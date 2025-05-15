@@ -19,6 +19,12 @@
     height: 362px;
   }
 }
+@media (max-width: 500px) {
+  .image-size {
+    width: 322px;
+    height: 322px;
+  }
+}
 
 .card h3 {
   font-family: "Russo One";

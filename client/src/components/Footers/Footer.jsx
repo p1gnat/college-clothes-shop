@@ -39,40 +39,42 @@ const Footer = () => {
               </a>
             </div>
           </article>
-          <section className="second-left">
-            <h3>Компания</h3>
-            <a href="#" target="_blank">
-              О компании
-            </a>
-            <a href="#" target="_blank">
-              Обновления
-            </a>
-            <a href="#" target="_blank">
-              Работы
-            </a>
-            <a href="#" target="_blank">
-              Карьера
-            </a>
-          </section>
-          <section className="third-left">
-            <h3>Акаунт</h3>
-            <a href="#" target="_blank">
-              Акаунт
-            </a>
-            <a href="#" target="_blank">
-              Управлять доставками
-            </a>
-            <a href="#" target="_blank">
-              Заказы
-            </a>
-            <a href="#" target="_blank">
-              Оплаты и чеки
-            </a>
+          <section className="second-both">
+            <section className="second-left">
+              <h3>Компания</h3>
+              <a href="#" target="_blank">
+                О компании
+              </a>
+              <a href="#" target="_blank">
+                Обновления
+              </a>
+              <a href="#" target="_blank">
+                Работы
+              </a>
+              <a href="#" target="_blank">
+                Карьера
+              </a>
+            </section>
+            <section className="third-left">
+              <h3>Акаунт</h3>
+              <a href="#" target="_blank">
+                Акаунт
+              </a>
+              <a href="#" target="_blank">
+                Управлять доставками
+              </a>
+              <a href="#" target="_blank">
+                Заказы
+              </a>
+              <a href="#" target="_blank">
+                Оплаты и чеки
+              </a>
+            </section>
           </section>
         </div>
         <section className="bottom">
           <div>
-            <p>
+            <p className="bottom-text">
               <span>college-ign</span> © 2000-2023, Все права подтверждены
             </p>
           </div>

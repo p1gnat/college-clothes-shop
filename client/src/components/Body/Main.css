@@ -37,7 +37,7 @@
   }
 }
 
-.main h1 {
+.main-h1 {
   font-family: "Russo One";
   font-weight: 400;
   font-size: 64px;
@@ -49,7 +49,7 @@
   vertical-align: middle;
 }
 
-.main p {
+.main-p {
   margin-bottom: 30px;
   font-family: "Roboto";
   font-weight: 400;
@@ -59,6 +59,16 @@
   letter-spacing: 0%;
 
   color: #00000099;
+}
+
+@media (max-width: 600px) {
+  .main-p {
+    font-size: 14px;
+  }
+  .main-h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
 }
 
 .main button {
@@ -112,6 +122,20 @@ div p {
   margin-left: 200px;
 }
 
+@media (max-width: 1650px) {
+  .star1 {
+    margin-top: 350px;
+    margin-left: 420px;
+  }
+  .star2 {
+    margin-top: 90px;
+    margin-left: -50px;
+  }
+  .main-img {
+    margin: auto;
+  }
+}
+
 @media (max-width: 800px) {
   .main-img {
     margin: auto;
@@ -127,9 +151,29 @@ div p {
   }
 }
 
+@media (max-width: 520px) {
+  .main-img {
+    max-width: 350px;
+  }
+  .star1 {
+    display: none;
+  }
+  .star2 {
+    display: none;
+  }
+}
+
 .numbers {
   margin-top: 40px;
   display: flex;
   gap: 20px;
   justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .numbers {
+    flex-flow: column;
+    align-items: center;
+    gap: 10px;
+  }
 }

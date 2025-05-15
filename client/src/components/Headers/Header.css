@@ -1,6 +1,6 @@
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin-top: 24px;
@@ -13,6 +13,24 @@ header nav {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@media (max-width: 1350px) {
+  header nav {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1050px) {
+  header nav {
+    width: 700px;
+  }
+}
+
+@media (max-width: 750px) {
+  header nav {
+    width: 400px;
+  }
 }
 
 .navigation-header {
@@ -85,4 +103,31 @@ div form img {
   border-radius: 20px;
 
   color: white;
+}
+
+.navigation-header-new {
+  margin-top: 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.p-navlink-new {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  color: #00000099;
+
+  text-decoration: underline;
+
+  width: 340px;
+  padding: 5px;
+  background-color: rgb(233, 233, 233);
+}
+
+.p-navlink-new:hover {
+  background-color: rgb(129, 129, 129);
 }
