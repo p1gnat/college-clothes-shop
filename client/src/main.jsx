@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { MantineProvider } from "@mantine/core";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +17,15 @@ createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <QueryClientProvider client={queryClient}>
       <Routes>
-        <Route path="/main" element={<App />}></Route>
+        <Route
+          path="/main"
+          element={
+            <MantineProvider withGlobalStyles withNormalizeCSS>
+              <App />
+            </MantineProvider>
+          }
+        ></Route>
+
         <Route path="/shop" element={<Shop />}></Route>
         <Route path="/shop/:id" element={<ShopItem />}></Route>
         <Route path="/cart" element={<Cart />}></Route>

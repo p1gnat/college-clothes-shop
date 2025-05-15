@@ -1,59 +1,61 @@
 import React, { useState } from "react";
+import { Carousel } from "@mantine/carousel";
+import { useMediaQuery } from "@mantine/hooks";
+import "@mantine/carousel/styles.css";
 import Card from "../Card";
-
 import { useEffect } from "react";
 import axios from "axios";
-// import "../../../../../server";
 
 import "./Cards.css";
 
 const Cards = () => {
   const [clothes, setClothes] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
-      const data = await axios.get("http://localhost:5000/api/clothes");
-      setClothes(data.data);
+      try {
+        const res = await axios.get("http://localhost:5000/api/clothes");
+        console.log(res.data);
+        setClothes([res.data[0], res.data[1], res.data[2], res.data[3]]);
+      } catch (err) {
+        console.error("Failed to fetch clothes", err);
+      } finally {
+        setLoading(false);
+      }
     })();
   }, []);
 
+  const smallScreen = useMediaQuery("(max-width: 800px)");
+
+  const slides = clothes.map((item) => (
+    <Carousel.Slide key={item._id}>
+      <Card
+        img={`http://localhost:5000${item.image}`}
+        h3={item.name}
+        rating={item.rating}
+        price={item.price}
+        id={item._id}
+      />
+    </Carousel.Slide>
+  ));
+
+  if (loading) return <>Загрузка...</>;
+  if (!clothes.length) return <>Нет товаров</>;
+
   return (
-    <section className="cards">
-      {clothes.length > 0 ? (
-        <>
-          <Card
-            img={`http://localhost:5000${clothes[0].image}`}
-            h3={clothes[0].name}
-            rating={clothes[0].rating}
-            price={clothes[0].price}
-            id={clothes[0]._id}
-          />
-          <Card
-            img={`http://localhost:5000${clothes[1].image}`}
-            h3={clothes[1].name}
-            rating={clothes[1].rating}
-            price={clothes[1].price}
-            id={clothes[1]._id}
-          />
-          <Card
-            img={`http://localhost:5000${clothes[2].image}`}
-            h3={clothes[2].name}
-            rating={clothes[2].rating}
-            price={clothes[2].price}
-            id={clothes[2]._id}
-          />
-          <Card
-            img={`http://localhost:5000${clothes[3].image}`}
-            h3={clothes[3].name}
-            rating={clothes[3].rating}
-            price={clothes[3].price}
-            id={clothes[3]._id}
-          />
-        </>
-      ) : (
-        <>Загрузка...</>
-      )}
-    </section>
+    <div className="carousel-wrapper">
+      <Carousel
+        slideSize={smallScreen ? "50%" : "25%"}
+        slideGap="md"
+        align="start"
+        slidesToScroll={smallScreen ? 2 : 4}
+        withControls
+        withIndicators
+      >
+        {slides}
+      </Carousel>
+    </div>
   );
 };
 

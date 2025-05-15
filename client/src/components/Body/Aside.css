@@ -14,7 +14,10 @@
   padding: 36px 64px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 800px) {
+  .aside {
+    flex-flow: column;
+  }
 }
 
 .aside-h1 {

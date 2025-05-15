@@ -39,7 +39,7 @@ header nav {
   text-decoration: none;
 }
 
-input {
+.header-input {
   width: 526px;
   height: 46px;
   border-radius: 62px;
@@ -51,9 +51,16 @@ input {
   padding: 12px 20px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
+  .navigation-header {
+    flex-flow: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 800px) {
   .header-input {
-    width: 400px;
+    display: none;
   }
 }
 

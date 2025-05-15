@@ -112,6 +112,21 @@ div p {
   margin-left: 200px;
 }
 
+@media (max-width: 800px) {
+  .main-img {
+    margin: auto;
+    max-width: 400px;
+  }
+  .star1 {
+    margin-top: 350px;
+    margin-left: 380px;
+  }
+  .star2 {
+    margin-top: 90px;
+    margin-left: -50px;
+  }
+}
+
 .numbers {
   margin-top: 40px;
   display: flex;

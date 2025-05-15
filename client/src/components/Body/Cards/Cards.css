@@ -1,8 +1,14 @@
-.cards {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  max-width: 1440px;
-  margin: auto;
+.carousel-wrapper {
+  max-width: 1440px; /* or whatever max width you want */
+  margin: 0 auto;
+  padding: 0 1rem; /* this padding creates breathing space */
+  box-sizing: border-box; /* make sure padding doesn’t add to width */
+  overflow-x: hidden; /* prevent any accidental horizontal scroll */
+}
+
+@media (max-width: 1250px) {
+  .carousel-wrapper {
+    max-width: 1440px;
+    margin: auto;
+  }
 }
