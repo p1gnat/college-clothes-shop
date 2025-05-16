@@ -3,9 +3,12 @@ import ProductCard from "./ProductCard";
 import axios from "axios";
 
 import "./AllProducts.css";
+import Title from "./Title";
 
 const AllProducts = () => {
   const [clothes, setClothes] = useState([]);
+
+  const maxWidth = document.documentElement.clientWidth;
 
   useEffect(() => {
     (async () => {
@@ -16,14 +19,7 @@ const AllProducts = () => {
 
   return (
     <section className="products">
-      <div className="top-parts">
-        <h1 className="product-h1">Отфильтровано:</h1>
-        <p className="product-p">Показывается 1-10 из всех продуктов</p>
-        <p className="product-p">
-          Сортировка:
-          <span className="product-span">Самые популярные ⟱</span>
-        </p>
-      </div>
+      {maxWidth <= 1450 ? <></> : <Title />}
 
       {clothes.length > 0 ? (
         <>

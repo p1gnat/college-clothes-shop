@@ -33,6 +33,12 @@ header nav {
   }
 }
 
+@media (max-width: 450px) {
+  header nav {
+    width: 350px;
+  }
+}
+
 .navigation-header {
   display: flex;
   flex-flow: row;

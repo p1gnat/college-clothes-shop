@@ -38,3 +38,49 @@
   display: flex;
   justify-content: space-between;
 }
+
+.small-wrapper {
+  display: flex;
+  margin: auto;
+  align-items: flex-start;
+  flex-flow: row;
+  gap: 20px;
+}
+
+.small-filters {
+  cursor: pointer;
+  padding: 5px;
+  background-color: rgb(204, 204, 204);
+  border-radius: 64px;
+}
+
+.all-filters-small {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-small {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 3px 0;
+  padding: 7px;
+  background-color: rgb(223, 223, 223);
+  border-radius: 12px;
+}
+
+.shop-button-small {
+  margin-top: 10px;
+
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  background-color: black;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 64px;
+}
