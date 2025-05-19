@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./CartCard.css";
 import { useStore } from "../Store/store";
 import axios from "axios";
+
+import "./CartCard.css";
 
 const CartCard = ({ elem }) => {
   const removeProducts = useStore((state) => state.removeProduct);
@@ -31,10 +32,11 @@ const CartCard = ({ elem }) => {
             alt={product.name}
             width="124px"
             height="124px"
+            className="cart-item-image"
           />
           <section>
             <div className="left-right">
-              <h2>{product.name}</h2>
+              <h2 className="cart-item-h2">{product.name}</h2>
               <img
                 src="/InShop/trash-bin.svg"
                 alt="delete"
@@ -44,7 +46,7 @@ const CartCard = ({ elem }) => {
                 style={{ cursor: "pointer" }}
               />
             </div>
-            <p>
+            <p className="cart-item-p">
               Размер:
               <span>{elem.size}</span>
             </p>

@@ -10,6 +10,7 @@
 
   margin: 10px 20px;
 }
+
 .left-right {
   width: 500px;
   display: flex;
@@ -37,4 +38,74 @@
   background-color: transparent;
 
   border: 0px;
+}
+
+@media (max-width: 1300px) {
+  .left-right {
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+  }
+
+  .cart-card-wrapper {
+    width: 507px;
+  }
+}
+
+@media (max-width: 550px) {
+  .left-right {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+  }
+
+  .cart-card-wrapper {
+    align-items: center;
+    width: 407px;
+  }
+
+  .cart-item-image {
+    width: 99px;
+    height: 99px;
+  }
+
+  .cart-item-h2,
+  .cart-card-price,
+  .cart-counter {
+    font-family: "Russo One";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
+
+  .cart-item-p {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+}
+
+@media (max-width: 450px) {
+  .cart-buttons {
+    padding: 8px 14px;
+    align-items: center;
+  }
+
+  .left-right {
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+  }
+
+  .cart-card-wrapper {
+    align-items: center;
+    width: 360px;
+  }
 }

@@ -4,9 +4,10 @@ import Header from "../components/Headers/Header";
 import Aside from "../components/Body/Aside";
 import Footer from "../components/Footers/Footer";
 import CartCard from "../components/Cart/CartCard";
-import "../pageStyles/Cart.css";
 import { useStore } from "../components/Store/store";
 import axios from "axios";
+
+import "../pageStyles/Cart.css";
 
 const Cart = () => {
   const products = useStore((state) => state.products);
