@@ -47,6 +47,13 @@
   gap: 20px;
 }
 
+@media (max-width: 550px) {
+  .small-wrapper {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
 .small-filters {
   cursor: pointer;
   padding: 5px;
