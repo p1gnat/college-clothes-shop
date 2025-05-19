@@ -47,7 +47,7 @@ const ShopItem = () => {
           <ImageSelector
             img={`http://localhost:5000${cloth.image}`}
           ></ImageSelector>
-          <section>
+          <section className="single-item-wrapper">
             <div className="for-gaps">
               <h2 className="title">{cloth.name}</h2>
               <p className="rating">

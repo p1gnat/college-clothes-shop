@@ -14,6 +14,7 @@ const ImageSelector = ({ img }) => {
             borderRadius: "20px",
             objectFit: "cover",
           }}
+          className="small-image-selector"
           alt="product's look"
           width={"152px"}
           height={"167px"}
@@ -26,6 +27,7 @@ const ImageSelector = ({ img }) => {
             borderRadius: "20px",
             objectFit: "cover",
           }}
+          className="small-image-selector"
           alt="product's look"
           width={"152px"}
           height={"167px"}
@@ -38,6 +40,7 @@ const ImageSelector = ({ img }) => {
             borderRadius: "20px",
             objectFit: "cover",
           }}
+          className="small-image-selector"
           alt="product's look"
           width={"152px"}
           height={"167px"}
@@ -47,6 +50,7 @@ const ImageSelector = ({ img }) => {
       <img
         src={img}
         alt="product's look"
+        className="big-image-selector"
         width={"444px"}
         height={"530px"}
         style={{ objectFit: "contain" }}

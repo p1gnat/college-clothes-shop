@@ -12,7 +12,7 @@ const Aside = () => {
       <form className="form" action="">
         <img
           className="img"
-          src="./main/footer/email.svg"
+          src="/main/footer/email.svg"
           alt="Эмейл"
           style={{ visibility: isActive ? "visible" : "hidden" }}
         />

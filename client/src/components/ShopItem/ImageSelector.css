@@ -1,6 +1,8 @@
 .selector-wrapper {
+  margin-left: 10px;
   display: flex;
   flex-flow: row;
+  align-items: center;
   gap: 20px;
 }
 
@@ -9,4 +11,38 @@
   display: flex;
   flex-flow: column;
   gap: 20px;
+}
+
+.big-image-selector {
+}
+
+@media (max-width: 1300px) {
+  .small-image-selector {
+    width: 132px;
+    height: 150px;
+  }
+  .big-image-selector {
+    width: 400px;
+    height: 490px;
+  }
+}
+
+@media (max-width: 900px) {
+  .selector-wrapper {
+    flex-flow: column;
+  }
+
+  .side-image-selector {
+    flex-flow: row;
+    max-width: 100%;
+  }
+
+  .small-image-selector {
+    width: 111px;
+    height: 106px;
+  }
+  .big-image-selector {
+    width: 358px;
+    height: 290px;
+  }
 }
