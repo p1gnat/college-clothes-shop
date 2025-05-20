@@ -22,6 +22,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/clothes", clothingRoutes);
 app.use(errorHandler);
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
