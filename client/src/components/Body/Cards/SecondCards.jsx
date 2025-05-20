@@ -9,11 +9,12 @@ import "./SecondCards.css";
 const SecondCards = () => {
   const [clothes, setClothes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const url = "https://college-clothes-shop-backend.onrender.com";
 
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/clothes");
+        const res = await axios.get(`${url}/api/clothes`);
         console.log(res.data);
         setClothes([res.data[4], res.data[5], res.data[6], res.data[7]]);
       } catch (err) {
@@ -29,7 +30,7 @@ const SecondCards = () => {
   const slides = clothes.map((item) => (
     <Carousel.Slide key={item._id}>
       <Card
-        img={`http://localhost:5000${item.image}`}
+        img={`${url}${item.image}`}
         h3={item.name}
         rating={item.rating}
         price={item.price}
