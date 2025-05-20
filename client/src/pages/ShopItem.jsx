@@ -13,6 +13,8 @@ import "../pageStyles/ShopItem.css";
 const ShopItem = () => {
   const itemId = useParams();
 
+  const url = "https://college-clothes-shop-backend.onrender.com";
+
   const [cloth, setCloth] = useState({});
   const [howMany, setHowMany] = useState(1);
   const [selected, setSelected] = useState("M");
@@ -27,9 +29,7 @@ const ShopItem = () => {
 
   useEffect(() => {
     (async () => {
-      const data = await axios.get(
-        `http://localhost:5000/api/clothes/${itemId.id}`
-      );
+      const data = await axios.get(`${url}/api/clothes/${itemId.id}`);
       setCloth(data.data);
     })();
   }, [itemId.id]);
@@ -44,9 +44,7 @@ const ShopItem = () => {
       <Header></Header>
       {cloth._id ? (
         <div className="main-wrap">
-          <ImageSelector
-            img={`http://localhost:5000${cloth.image}`}
-          ></ImageSelector>
+          <ImageSelector img={`${url}${cloth.image}`}></ImageSelector>
           <section className="single-item-wrapper">
             <div className="for-gaps">
               <h2 className="title">{cloth.name}</h2>

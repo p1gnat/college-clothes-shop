@@ -163,6 +163,8 @@ const schema = yup.object({
 });
 
 const Register = () => {
+  const url = "https://college-clothes-shop-backend.onrender.com";
+
   const {
     register,
     handleSubmit,
@@ -177,7 +179,7 @@ const Register = () => {
       console.log(data);
       try {
         axios
-          .post("http://localhost:5000/api/auth/register", {
+          .post(`${url}/api/auth/register`, {
             email: data.email,
             password: data.password,
           })

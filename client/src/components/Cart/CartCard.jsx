@@ -10,11 +10,11 @@ const CartCard = ({ elem }) => {
   const [product, setProduct] = useState([]);
   console.log(elem.id);
 
+  const url = "https://college-clothes-shop-backend.onrender.com";
+
   useEffect(() => {
     (async () => {
-      const productFetch = await axios.get(
-        `http://localhost:5000/api/clothes/${elem.id}`
-      );
+      const productFetch = await axios.get(`${url}/api/clothes/${elem.id}`);
       setProduct(productFetch.data);
     })();
   }, [elem.id]);
@@ -28,7 +28,7 @@ const CartCard = ({ elem }) => {
       {product.image ? (
         <>
           <img
-            src={`http://localhost:5000${product.image}`}
+            src={`${url}${product.image}`}
             alt={product.name}
             width="124px"
             height="124px"

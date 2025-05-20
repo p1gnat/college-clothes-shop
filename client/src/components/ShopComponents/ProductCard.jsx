@@ -3,10 +3,12 @@ import ShopCard from "../Body/ShopCard";
 import "./ProductCard.css";
 
 const ProductCard = ({ image, name, rating, price, id }) => {
+  const url = "https://college-clothes-shop-backend.onrender.com";
+
   return (
     <div style={{ margin: "20px 0 40px 0" }}>
       <ShopCard
-        img={`http://localhost:5000${image}`}
+        img={`${url}${image}`}
         h3={name}
         rating={rating}
         price={price}

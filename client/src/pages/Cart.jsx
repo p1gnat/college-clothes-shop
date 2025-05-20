@@ -10,6 +10,8 @@ import axios from "axios";
 import "../pageStyles/Cart.css";
 
 const Cart = () => {
+  const url = "https://college-clothes-shop-backend.onrender.com";
+
   const products = useStore((state) => state.products);
   const [price, setPrice] = useState(0);
 
@@ -17,9 +19,7 @@ const Cart = () => {
     const fetchPrices = async () => {
       try {
         const responses = await Promise.all(
-          products.map((elem) =>
-            axios.get(`http://localhost:5000/api/clothes/${elem.id}`)
-          )
+          products.map((elem) => axios.get(`${url}/api/clothes/${elem.id}`))
         );
 
         const total = responses.reduce((acc, response, index) => {

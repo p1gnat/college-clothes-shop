@@ -7,12 +7,13 @@ import Title from "./Title";
 
 const AllProducts = () => {
   const [clothes, setClothes] = useState([]);
+  const url = "https://college-clothes-shop-backend.onrender.com";
 
   const maxWidth = document.documentElement.clientWidth;
 
   useEffect(() => {
     (async () => {
-      const data = await axios.get("http://localhost:5000/api/clothes");
+      const data = await axios.get(`${url}/api/clothes`);
       setClothes(data.data);
     })();
   }, []);
