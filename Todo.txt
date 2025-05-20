@@ -1,22 +1,28 @@
 TODO
 
-Finish header style
-Finish main styles
-Finish footer style
+
 
 Put everything in Components
 
-Make optimisation for phones
-
 1)only styles/ no internal logic
-2)I need to make every products page
-3)make cart logic
 
 
 
 Make login-register pages
 Make logic for them in backend
 make logic in Mongodb for them
+
+
+1)ACCOUNT Page
+2)ADMIN Control Page
+3)DISCOUNTS + Logic in CART for them
+4)NEW
+5)BRANDS
+
+6)JOBS
+7)ABOUT COMPANY
+8)ALL PAGES FROM FOOTER
+
 
 Attach logic to project
 Make page with your account
@@ -25,3 +31,6 @@ Make page with your account
 Data base with clothes
 fetch clothes into project
 only get requests
+
+
+
